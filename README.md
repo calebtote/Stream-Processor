@@ -8,20 +8,5 @@
 [see the config.properties for details]<br>
 <br>
 
-#####Optional files:<br>
-- run.sh                  -- for running the application<br>
-- deploy.sh               -- for secure copying the deployment to all the hosts<br>
-<br>
-
 #####Running the application:<br>
 - From the command prompt, run the following:   java -jar UX.jar<br>
-- We have placed the necessary artifacts in /root on all VMs<br>
-- The output will be written to the local directory of the running servers (results.txt).<br>
-<br>
-
-#####Commands:
-- k <Enter> to leave the peer group <br>
-- a <Enter> to rejoin the peer group <br>
-- l <Enter> to list the current peer group <br>
-- i <Enter> to print the ID <br>
-- q <Enter> to exit the application peacefully <br>
