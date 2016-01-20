@@ -4,7 +4,7 @@ This started as a project for a course in distributed systems during my masters 
 The design has some core classes that need to be discussed before we get into how it is implemented and works in practice.
 
 ######Coordinator
-The `Coordinator` class is much like a Topology Master in Apache Storm, just a bit watered down. The `Coordinator` assigns available workers to utilities (think, bolts), and sends an initialization RPC letting each host who the `Coordinator` is, and which utilities have been assigned to them.
+The `Coordinator` class is much like a Topology Master in Apache Storm, just a bit watered down. The `Coordinator` assigns available workers to utilities (think, bolts), and sends an initialization RPC letting each host know who the `Coordinator` is, and which utilities have been assigned to them.
 
 ######AppBase / UtilBase
 These two base classes make up our "topology". Every application is derived from `AppBase`. Applications are straightforward in that they simply define a set of utilities to be applied to the dataset. Utilities are derived from `UtilBase`, and are executed in the order they are added. Utilities are `Callable` objects, which override a thread-safe `call()` method.
