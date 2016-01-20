@@ -30,7 +30,7 @@ Once proper utilities are defined (see: `UtilBase` and it's derivations), here's
 
 Much of the above is fully customizable, based on configuration settings, utility definitions and assignments, and how you want your summarization of data to appear. Additionally, `Workers` do not explicitly have to work in serial, but can be adjusted fairly easily (through code changes) to have a single stream source as the input to both `Worker`s, simultaneously, with a consolidation node that merges the results. This isn't fully implemented, but the framework doesn't need much modification.
 
-Note also that these aren't distinct opperations, but are in fact happening in parallel. To put it another way, the `Coordinator` could be accumulated results from the last `Worker`, while it's still streaming in data from the source. Indeed, the stream _flows_ through the topology.
+Note also that these aren't distinct opperations, but are in fact happening in parallel. To put it another way, the `Coordinator` could be accumulating results from the last `Worker` in the chain, _while it's still streaming in data_ from the source. Indeed, the stream _flows_ through the topology.
 
 #####File needed to run the project:
 - UX.jar                  -- main jar containing project compiled code<br>
